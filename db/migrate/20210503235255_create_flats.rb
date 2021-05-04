@@ -5,7 +5,7 @@ class CreateFlats < ActiveRecord::Migration[6.1]
       t.string :address
       t.string :city
       t.text :description
-      t.boolean :available
+      t.boolean :available, default: true
       t.float :price
       t.references :user, null: false, foreign_key: true
 
