@@ -9,10 +9,15 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.flat = Flat.find(params[:id])
     if @booking.save
-      redirect_to dashboard_path(@flat)
+      redirect_to dashboard_path()
     else
       render :new
     end
+  end
+
+  def destroy
+    @booking.destroy
+    redirect_to dashboard_path()
   end
 
   private
