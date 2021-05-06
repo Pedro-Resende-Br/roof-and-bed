@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2021_05_05_230444) do
     t.string "address"
     t.string "city"
     t.text "description"
-    t.boolean "available", default: true
+    t.boolean "available"
     t.float "price"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
