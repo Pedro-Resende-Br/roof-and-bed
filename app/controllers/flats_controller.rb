@@ -16,7 +16,6 @@ class FlatsController < ApplicationController
   def create
     @flat = Flat.new(flat_params)
     @flat.user = current_user
-    @flat.flat = Flat.find(params[:id])
     if @flat.save
       redirect_to dashboard_path
     else
