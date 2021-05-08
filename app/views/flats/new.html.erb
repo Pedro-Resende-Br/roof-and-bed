@@ -1,9 +1,15 @@
-<%= simple_form_for @flat do |f| %>
-  <%= f.input :title %>
-  <%= f.input :address %>
-  <%= f.input :city %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.button :submit %>
-<% end %>
+
+<div class="container">
+<div class="left-box"></div>
+<div class="right-box">
+    <%= simple_form_for @flat do |f| %>
+      <%= f.input :title %>
+      <%= f.input :address %>
+      <%= f.input :city %>
+      <%= f.input :description %>
+      <%= f.input :price %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>
