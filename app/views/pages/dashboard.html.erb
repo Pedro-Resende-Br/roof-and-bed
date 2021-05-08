@@ -1,0 +1,26 @@
+<div class="container">
+
+<ul class="list-inline tabs-underlined">
+  <li>
+    <a href="#" class="tab-underlined active">Bookings</a>
+  </li>
+  <li>
+    <a href="#" class="tab-underlined">Flats</a>
+  </li>
+</ul>
+
+<h3>Your bookings</h3>
+  <div class="my-bookings">
+    <%= render 'components/card-booking' %>
+    <%= link_to root_path do%>
+     <p>Book your new adventure!</p>
+    <%end%>
+  </div>
+  <h3>Your flats</h3>
+   <div class="my-flats">
+      <%= render 'components/card-flat' %>
+      <%= link_to new_flat_path do%>
+        <p>Add a new flat to your collection!</p>
+      <%end%>
+  </div>
+</div>
