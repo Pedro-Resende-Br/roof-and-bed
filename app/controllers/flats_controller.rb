@@ -18,7 +18,7 @@ class FlatsController < ApplicationController
     @flat.user = current_user
     if @flat.save
       #redirect_to dashboard_path 
-      redirect_to flats_index_path
+      redirect_to root_path
     else
       render :new
     end
