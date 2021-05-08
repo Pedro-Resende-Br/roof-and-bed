@@ -10,7 +10,7 @@ users = []
 
 5.times do
   user = User.new(
-    email:    Faker::Internet.email,
+    email: Faker::Internet.email,
     password: "abc123",
     role: "traveler"
   )
@@ -18,16 +18,29 @@ users = []
   users << user
 end
 
+flats = []
+
 10.times do
   flat = Flat.new(
-    title:    Faker::Company.name,
+    title: Faker::Company.name,
     address: Faker::Address.street_address,
     city: Faker::Address.city,
     description: Faker::Lorem.sentences(number: 1),
     price: Faker::Number.decimal(l_digits: 2)
   )
-
   flat.user = users.sample
-
   flat.save!
+  flats << flat
+end
+
+4.times do
+  booking = Booking.new(
+    start_date: Faker::Date.between(from: '2021-05-20', to: '2021-05-25'),
+    end_date: Faker::Date.between(from: '2021-06-01', to: '2021-06-21')
+  )
+
+  booking.user = users.sample
+  booking.flat = flats.sample
+  booking.save!
+  
 end

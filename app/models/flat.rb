@@ -3,5 +3,5 @@ class Flat < ApplicationRecord
   has_many :bookings
   has_many_attached :photos
 
-  validates :title, :address, :city, :description, :price, :photos, presence: true
+  validates :title, :address, :city, :description, :price, presence: true
 end
