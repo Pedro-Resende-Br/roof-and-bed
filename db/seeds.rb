@@ -31,7 +31,3 @@ end
 
   flat.save!
 end
-
-
-
-
