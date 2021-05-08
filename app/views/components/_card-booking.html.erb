@@ -1,0 +1,17 @@
+<div class="row m-4">
+  <% @bookings.each do |booking| %>
+    <div class="col-xs-12 col-sm-4">
+      <%= link_to flat_path(booking.flat) do %>
+        <div class="card-trip">
+          <img src="https://source.unsplash.com/random" />
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= booking.flat.title %></h2>
+              <p><%= booking.flat.description.truncate(30) %></p>
+            </div>
+           </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
