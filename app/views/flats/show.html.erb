@@ -1,1 +1,20 @@
-<h1>SHOW me the money</h1>
+<div class="photo"></div>
+<div class="container">    
+  
+  <div class="info">
+    <h3><%=@flat.title%></h3>
+    <p><%=@flat.address%></p>
+    <p><%=@flat.city%></p>
+  </div>
+
+  <div class="description">
+    <h3>Description:</h3>
+    <p><%=@flat.description%></p>
+  </div>
+
+  <div class="price_and_dates">
+    <h3>Price</h3> 
+    <p><%=@flat.price%></p>
+    <%= link_to "Book Now!", new_flat_booking_path(@flat), class: "btn btn-primary"%>
+  </div>  
+</div>
