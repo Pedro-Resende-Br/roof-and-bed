@@ -1,20 +1,29 @@
-<div class="photo"></div>
-<div class="container">    
-  
-  <div class="info">
-    <h3><%=@flat.title%></h3>
-    <p><%=@flat.address%></p>
-    <p><%=@flat.city%></p>
+<div class="container">  
+  <hr>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
   </div>
-
-  <div class="description">
-    <h3>Description:</h3>
-    <p><%=@flat.description%></p>
+  <hr>
+  <div class="details">
+    <div class="boxdetails">
+      <div class="info">
+        <h3><%=@flat.title%></h3>
+        <p><%=@flat.address%></p>
+        <p><%=@flat.city%></p>
+      </div>
+      <div class="description">
+        <h3>Description:</h3>
+        <p><%=@flat.description%></p>
+      </div>
+    </div>
+    <div class='box'>
+      <div class="price_and_dates">
+        <h3>Price</h3> 
+        <p><%=@flat.price%></p>
+        <div class="booking_button">
+          <%= link_to "Book Now!", new_flat_booking_path(@flat), class: "btn btn-primary"%>
+        </div>
+      </div>      
+    </div>     
   </div>
-
-  <div class="price_and_dates">
-    <h3>Price</h3> 
-    <p><%=@flat.price%></p>
-    <%= link_to "Book Now!", new_flat_booking_path(@flat), class: "btn btn-primary"%>
-  </div>  
+  <hr>
 </div>
