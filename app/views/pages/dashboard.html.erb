@@ -8,7 +8,7 @@
     <a href="#" class="tab-underlined">Flats</a>
   </li>
 </ul>
-
+<hr>
 <h3>Your bookings</h3>
   <div class="my-bookings">
     <%= render 'components/card-booking' %>
@@ -16,11 +16,14 @@
      <p>Book your new adventure!</p>
     <%end%>
   </div>
+  <hr>
   <h3>Your flats</h3>
    <div class="my-flats">
       <%= render 'components/card-flat' %>
       <%= link_to new_flat_path do%>
-        <p>Add a new flat to your collection!</p>
+        <p>Add a new flat to your collection!</p> 
       <%end%>
   </div>
+  <hr>
+  <%= link_to "Back to home.", root_path, class: "btn btn-outline-success"%>
 </div>

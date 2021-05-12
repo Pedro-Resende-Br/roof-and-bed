@@ -34,13 +34,11 @@ class FlatsController < ApplicationController
 
   def update
     @flat.update(flat_params)
-    authorize @flat 
     redirect_to dashboard_path
   end
 
   def destroy
     @flat.destroy
-    authorize @flat 
     redirect_to dashboard_path
   end
 
