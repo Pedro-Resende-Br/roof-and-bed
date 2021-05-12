@@ -30,15 +30,19 @@ class FlatsController < ApplicationController
   end
 
   def edit
+    @flat = Flat.find(params[:id]) 
+    authorize @flat 
   end
 
   def update
     @flat.update(flat_params)
+    authorize @flat 
     redirect_to dashboard_path
   end
 
   def destroy
     @flat.destroy
+    authorize @flat
     redirect_to dashboard_path
   end
 

@@ -1,6 +1,6 @@
 <div class="container">  
   <hr>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1600488999129-e49662f4020c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80">
   </div>
   <hr>
   <div class="details">
@@ -27,6 +27,6 @@
   </div>
   <hr>
   <%= link_to "Update your flat.", edit_flat_path(@flat), class: "btn btn-outline-warning"%>
-  <%= link_to "Delete your flat.", edit_flat_path(@flat), class: "btn btn-outline-danger"%>
+  <%= link_to "Delete your flat.", flat_path, method: :delete, class: "btn btn-outline-danger"%>
   <%= link_to "Back to home.", root_path, class: "btn btn-outline-success"%>
 </div>
