@@ -1,21 +1,26 @@
 class FlatsController < ApplicationController
   before_action :set_flat, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @flats = Flat.all
+    @flats = policy_scope(Flat).order(created_at: :desc)
+
   end
 
   def show
     @flat = Flat.find(params[:id])
+    authorize @flat
   end
 
   def new
-    @flat = Flat.new  
+    @flat = Flat.new
+    authorize @flat  
   end
 
   def create
     @flat = Flat.new(flat_params)
     @flat.user = current_user
+    authorize @flat 
     if @flat.save
       redirect_to dashboard_path 
       #redirect_to root_path
@@ -29,11 +34,13 @@ class FlatsController < ApplicationController
 
   def update
     @flat.update(flat_params)
+    authorize @flat 
     redirect_to dashboard_path
   end
 
   def destroy
     @flat.destroy
+    authorize @flat 
     redirect_to dashboard_path
   end
 

@@ -33,7 +33,6 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'pundit'
-
 gem "faker"
 
 group :development, :test do
