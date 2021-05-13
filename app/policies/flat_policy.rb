@@ -18,15 +18,22 @@ class FlatPolicy < ApplicationPolicy
   end
 
   def edit?
-    return true
+    update?
   end
 
   def update?
-    return true
+    user_is_owner?
   end
   
   def destroy?
-    return true
+    user_is_owner? 
   end
   
+  private
+
+  def user_is_owner?
+    record.user == user    
+  end
+  
+
 end
