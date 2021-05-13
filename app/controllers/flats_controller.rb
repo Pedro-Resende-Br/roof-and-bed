@@ -8,11 +8,8 @@ class FlatsController < ApplicationController
   
   def show
     @flat = Flat.find(params[:id])
+    @markers = {lat: @flat.latitude, lng: @flat.longitude}
     authorize @flat
-    @markers = {
-        lat: @flat.latitude,
-        lng: @flat.longitude
-      }
   end
 
   def new
@@ -52,7 +49,7 @@ class FlatsController < ApplicationController
   private
 
   def flat_params
-    params.require(:flat).permit(:title, :description, :address, :price, photos: [])
+    params.require(:flat).permit(:title, :description, :address, :price, :photo)
   end
 
   def set_flat
