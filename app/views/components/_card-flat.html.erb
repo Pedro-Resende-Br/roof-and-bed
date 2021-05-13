@@ -3,14 +3,14 @@
     <div class="col-xs-12 col-sm-4">
       <%= link_to flat_path(flat) do %>
         <div class="card-trip">
-          <img src="https://source.unsplash.com/random" />
+          <%= cl_image_tag flat.photo.key %>
           <div class="card-trip-infos">
             <div>
               <h2><%= flat.title %></h2>
-              <p><%= flat.description.truncate(30) %></p>
+              <p><%= flat.description.truncate(60) %></p>
             </div>
-            <h2 class="card-trip-pricing">$ <%= flat.price %></h2>
-            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+            <h2 class="card-trip-pricing">$<%= flat.price.to_i %></h2>
+            <%= cl_image_tag flat.user.avatar.key, class: "card-trip-user avatar-bordered" %>
           </div>
         </div>
       </div>
