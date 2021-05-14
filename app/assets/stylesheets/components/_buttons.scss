@@ -1,0 +1,31 @@
+.buttons {
+    font-size: 30px;
+}
+.link_buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    margin: 15px;
+}
+.fa-backward {
+    color: rgb(70, 70, 248);
+
+    &:hover {
+        color: blue;
+      }
+}
+.fa-user-edit {
+    color: white;
+
+    &:hover {
+        color: yellow;
+      }
+}
+.fa-trash-alt {
+    color: white;
+
+    &:hover {
+        color: red;
+      }
+}

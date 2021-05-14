@@ -12,18 +12,15 @@
 <h3>Your bookings</h3>
   <div class="my-bookings">
     <%= render 'components/card-booking' %>
-    <%= link_to root_path do%>
-     <p>Book your new adventure!</p>
-    <%end%>
+    <%= link_to "Book your new adventure now!", root_path(@flat), class: "btn btn-primary btn-lg active"%>
   </div>
   <hr>
   <h3>Your flats</h3>
    <div class="my-flats">
       <%= render 'components/card-flat' %>
-        <%= link_to new_flat_path do%>
-      <p>Add a new flat to your collection!</p> 
-      <%end%>
+        <%= link_to "Add a new flat to your collection!", new_flat_path(@flat), class: "btn btn-primary btn-lg active"%>
+       
   </div>
   <hr>
-  <%= link_to "Back to home.", root_path, class: "btn btn-outline-success"%>
+  <div class="go_back"><%= link_to "", root_path, class: "fas fa-backward"%></div>
 </div>
