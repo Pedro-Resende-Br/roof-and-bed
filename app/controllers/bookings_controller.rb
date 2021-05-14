@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     #check_aviability(@booking)
     authorize @booking
     if @booking.save
-      redirect_to root_path
+      redirect_to dashboard_path
     else
       new
       render :new
