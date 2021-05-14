@@ -2,10 +2,12 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: 10px;
   border: #92b2be 3px solid;
   margin: 15px 15px;
   height: 300px;
+
 }
 
 .card-trip > img {
