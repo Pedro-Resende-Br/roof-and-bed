@@ -17,6 +17,7 @@
 body {
   position: relative;
   height: 100vh;
+  background-color: #92b2be;
 }
 
 #site-wrapper {
@@ -31,8 +32,16 @@ body {
   overflow: hidden;
   display: block;
   position: relative;
-}
-
+} 
 a:hover {
   text-decoration: none;
+}
+
+.go_back {
+  font-size: 30px;
+  color: rgb(70, 70, 248);
+
+  &:hover {
+      color: blue;
+    }
 }
