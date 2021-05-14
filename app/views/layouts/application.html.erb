@@ -18,8 +18,12 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render 'components/navbar' %>
-    <%= yield %>
-    <%= render 'components/footer' %>
+    <div id="site-wrapper">
+      <div id="site-content">
+        <%= render 'components/navbar' %>
+        <%= yield %>
+      </div>
+      <%= render 'components/footer' %>
+    </div>
   </body>
 </html>

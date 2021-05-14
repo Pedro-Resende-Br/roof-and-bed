@@ -14,6 +14,25 @@
 @import "flats/index";
 @import "bookings/index";
 
+body {
+  position: relative;
+  height: 100vh;
+}
+
+#site-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: block;
+}
+
+#site-content {
+  min-height: 100vh;
+  padding-bottom: 100px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
 a:hover {
   text-decoration: none;
 }
