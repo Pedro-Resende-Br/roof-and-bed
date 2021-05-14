@@ -4,7 +4,7 @@ class PagesController < ApplicationController
 
   def dashboard
     user = current_user
-    @flats = Flat.where("user_id = #{user.id}")
+    @flats = Flat.where("user_id = #{user.id}").paginate(page: params[:page], per_page: 9)
     @bookings = Booking.where("user_id = #{user.id}")
   end
 end

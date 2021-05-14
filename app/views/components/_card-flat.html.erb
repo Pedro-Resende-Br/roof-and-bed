@@ -10,10 +10,15 @@
               <p><%= flat.description.truncate(60) %></p>
             </div>
             <h2 class="card-trip-pricing">$<%= flat.price.to_i %></h2>
-            <%= cl_image_tag flat.user.avatar.key, class: "card-trip-user avatar-bordered" %>
+            <% if flat.user.avatar.key.present? %>
+              <%= cl_image_tag flat.user.avatar.key, class: "card-trip-user avatar-bordered" %>
+            <% else %>
+              <%= image_tag "generic-user.jpg", class: "card-trip-user avatar-bordered" %>
+            <% end %>  
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   <% end %>
 </div>
+<%= will_paginate @flats, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-center) %>

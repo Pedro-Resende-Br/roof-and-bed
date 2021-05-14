@@ -20,6 +20,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'cloudinary', '~> 1.16.0'
 gem 'geocoder'
+gem 'pg_search', '~> 2.3.0'
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap4'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

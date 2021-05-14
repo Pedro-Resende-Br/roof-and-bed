@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RoofAndBed</title>
+    <title>Roof & Bed</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,14 +12,17 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-    
+    <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render 'components/navbar' %>
-    <%= yield %>
-    <%= render 'components/footer' %>
+    <%= render 'components/flashes' %>
+    <div id="site-wrapper">
+      <div id="site-content">
+        <%= render 'components/navbar' %>
+        <%= yield %>
+      </div>
+      <%= render 'components/footer' %>
+    </div>
   </body>
 </html>

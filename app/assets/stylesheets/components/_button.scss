@@ -10,3 +10,11 @@
   background: #00B0FF;
   color: white;
 }
+
+@media(max-width: 768px) {
+  .btn-flat {
+    height: 3rem;
+    width: 94%;
+    margin-top: 80px;
+  }
+}
