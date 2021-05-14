@@ -4,11 +4,11 @@ class FlatsController < ApplicationController
 
   def index
     @flats = policy_scope(Flat).order(created_at: :desc)
-
   end
-
+  
   def show
     @flat = Flat.find(params[:id])
+    @markers = [{lat: @flat.latitude, lng: @flat.longitude}]
     authorize @flat
   end
 
@@ -49,7 +49,7 @@ class FlatsController < ApplicationController
   private
 
   def flat_params
-    params.require(:flat).permit(:title, :description, :address, :city, :price, photos: [])
+    params.require(:flat).permit(:title, :description, :address, :price, :photo)
   end
 
   def set_flat
