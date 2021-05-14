@@ -4,9 +4,9 @@ class FlatsController < ApplicationController
 
   def index
     if params[:query].present?
-      @flats = policy_scope(Flat.search_by_title_address_and_description(params[:query])).order(created_at: :desc)
+      @flats = policy_scope(Flat.search_by_title_address_and_description(params[:query])).order(created_at: :desc).paginate(page: params[:page], per_page: 9)
     else
-      @flats = policy_scope(Flat).order(created_at: :desc)
+      @flats = policy_scope(Flat).order(created_at: :desc).paginate(page: params[:page], per_page: 9)
     end
   end
   
