@@ -1,1 +1,12 @@
-<h1>Hello world!</h1>
+<div class="container">
+  <hr>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1600488999129-e49662f4020c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80">
+  </div>
+  <hr>
+  <h3><%=@flat.title%></h3>
+  <p><%=@flat.address%>, <%=@flat.city%></p>
+<hr>
+  <div class="form">
+    <%= render 'form_booking', flat: @flat, booking: @booking %>
+  </div>
+</div>
