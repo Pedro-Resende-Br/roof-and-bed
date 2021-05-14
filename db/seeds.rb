@@ -63,8 +63,7 @@ flats = []
   flat_photo1 = URI.open('https://a0.muscache.com/im/pictures/0d7a10cd-1b6c-4eb8-b8c5-73826d3aed57.jpg')
   flat = Flat.new(
     title: titles.sample,
-    address: Faker::Address.street_address,
-    city: Faker::Address.city,
+    address: "Hôtel de Ville, 75004 Paris, France",
     description: Faker::Lorem.paragraphs.first,
     price: Faker::Number.within(range: 40..200)
   )
