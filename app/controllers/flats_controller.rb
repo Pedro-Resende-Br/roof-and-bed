@@ -3,7 +3,11 @@ class FlatsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @flats = policy_scope(Flat).order(created_at: :desc)
+    if params[:query].present?
+      @flats = policy_scope(Flat.search_by_title_address_and_description(params[:query])).order(created_at: :desc)
+    else
+      @flats = policy_scope(Flat).order(created_at: :desc)
+    end
   end
   
   def show
