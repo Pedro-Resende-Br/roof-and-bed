@@ -14,6 +14,19 @@
 @import "flats/index";
 @import "bookings/index";
 
+body{
+  background-color: #92b2be;
+}
+
 a:hover {
   text-decoration: none;
+}
+
+.go_back {
+  font-size: 30px;
+  color: rgb(70, 70, 248);
+
+  &:hover {
+      color: blue;
+    }
 }

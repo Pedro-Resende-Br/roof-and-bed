@@ -1,0 +1,14 @@
+<div class= "buttons">
+  <div class= "link_buttons">
+    <%= link_to "", root_path, class: "fas fa-backward"%> 
+    <div class= "edit_buttons">
+      <% if policy(@flat).edit? %>    
+      <%= link_to "", edit_flat_path(@flat), class: "fas fa-user-edit"%>
+      <% end %>
+
+      <% if policy(@flat).destroy? %>
+        <%= link_to "", flat_path, method: :delete, class: "fas fa-trash-alt"%>
+      <% end %>
+    </div>
+  </div>  
+</div>
