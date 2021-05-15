@@ -1,7 +1,7 @@
 class Flat < ApplicationRecord
   belongs_to :user
   has_many :bookings
-  has_one_attached :photo # change later to has_many_attached
+  has_many_attached :photos
   geocoded_by :address
 
   include PgSearch::Model
@@ -11,6 +11,6 @@ class Flat < ApplicationRecord
       tsearch: { prefix: true }
     }
     
-  validates :title, :address, :description, :price, presence: true
+  validates :title, :address, :description, :price, :photos, presence: true
   after_validation :geocode, if: :will_save_change_to_address?
 end

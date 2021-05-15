@@ -3,7 +3,7 @@
     <div class="col-xs-12 col-sm-4">
       <%= link_to flat_path(flat) do %>
         <div class="card-trip">
-          <%= cl_image_tag flat.photo.key %>
+          <%= cl_image_tag flat.photos.first.key %>
           <div class="card-trip-infos">
             <div>
               <h2><%= flat.title %></h2>

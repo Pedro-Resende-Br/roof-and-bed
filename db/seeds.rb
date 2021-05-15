@@ -61,6 +61,9 @@ flats = []
 
 10.times do
   flat_photo1 = URI.open('https://a0.muscache.com/im/pictures/0d7a10cd-1b6c-4eb8-b8c5-73826d3aed57.jpg')
+  flat_photo2 = URI.open('https://a0.muscache.com/im/pictures/d222e5b9-8f51-4a72-8f3d-b2b2ef811c86.jpg')
+  flat_photo3 = URI.open('https://a0.muscache.com/im/pictures/9c65a9fa-5836-4dbb-b138-e17e128ed42f.jpg')
+
   flat = Flat.new(
     title: titles.sample,
     address: "Hôtel de Ville, 75004 Paris, France",
@@ -68,7 +71,9 @@ flats = []
     price: Faker::Number.within(range: 40..200)
   )
   flat.user = users.sample
-  flat.photo.attach(io: flat_photo1, filename: 'flat1.jpg', content_type: 'image/jpg')
+  flat.photos.attach(io: flat_photo2, filename: 'flat1.jpg', content_type: 'image/jpg')
+  flat.photos.attach(io: flat_photo1, filename: 'flat1.jpg', content_type: 'image/jpg')
+  flat.photos.attach(io: flat_photo3, filename: 'flat1.jpg', content_type: 'image/jpg')
   flat.save!
   flats << flat
 end
