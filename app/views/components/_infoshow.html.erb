@@ -9,17 +9,13 @@
       </div>
     </div>
     <div class='box'>
-      <div>
-        <p>start_date</p>
-        <p>end_date</p> 
-      </div>
-      <div class="price_booking">
-        <div>
-          <p><i class="fas fa-dollar-sign"></i> <%=@flat.price%></p>
-        </div>  
+      <ul>
+        <div class="price">
+        <p><i class="fas fa-dollar-sign"></i> <strong><%=@flat.price%></strong> p/day.</p>
+        </div> 
         <div class="booking_button">
-          <%= link_to "Book Now!", new_flat_booking_path(@flat), class: "btn btn-primary btn-lg"%>
-        </div>
+        <%= link_to "Book Right Now!", new_flat_booking_path(@flat), class: "btn btn-primary btn-lg"%>
       </div>
+    </ul>  
     </div>
   </div>
