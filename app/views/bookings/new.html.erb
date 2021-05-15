@@ -4,8 +4,10 @@
     <%= render 'components/carousel' %>
   </div>
   <hr>
-  <h3><%=@flat.title%></h3>
-  <p><%=@flat.address%></p>
+  <div class="infonew">
+    <h3><%=@flat.title%></h3>
+    <p><%=@flat.address%></p>
+  </div>
   <hr>
   <div class="form m-3">
     <%= render 'form_booking', flat: @flat, booking: @booking %>
