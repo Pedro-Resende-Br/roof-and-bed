@@ -1,24 +1,46 @@
 <div class="row m-4">
   <% @bookings.each do |booking| %>
-    <div class="col-xs-12 col-sm-4">
-      <%= link_to flat_path(booking.flat) do %>
-        <div class="card-trip">
-          <%= cl_image_tag booking.flat.photos.first.key %>
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= booking.flat.title %></h2>
-              <p><%= booking.flat.description.truncate(60) %></p>
+    <% if booking.end_date > DateTime.now %>
+      <div class="col-xs-12 col-md-6 col-lg-4">
+        <%= link_to flat_path(booking.flat) do %>
+          <div class="card-trip">
+            <%= cl_image_tag booking.flat.photos.first.key %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= booking.flat.title %></h2>
+                <p><%= booking.flat.description.truncate(60) %></p>
+              </div>
+              <h2 class="card-trip-pricing">$<%= booking.flat.price.to_i %></h2>
+              <% if booking.flat.user.avatar.key.present? %>
+                <%= cl_image_tag booking.flat.user.avatar.key, class: "card-trip-user avatar-bordered" %>
+              <% else %>
+                <%= image_tag "generic-user.jpg", class: "card-trip-user avatar-bordered" %>
+              <% end %>  
             </div>
-            <h2 class="card-trip-pricing">$<%= booking.flat.price.to_i %></h2>
-            <% if booking.flat.user.avatar.key.present? %>
-              <%= cl_image_tag booking.flat.user.avatar.key, class: "card-trip-user avatar-bordered" %>
-            <% else %>
-              <%= image_tag "generic-user.jpg", class: "card-trip-user avatar-bordered" %>
-            <% end %>  
           </div>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="col-xs-12 col-md-6 col-lg-4">
+        <%= link_to flat_path(booking.flat) do %>
+          <div class="card-trip" style="opacity:0.5;">
+            <%= cl_image_tag booking.flat.photos.first.key %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= booking.flat.title %></h2>
+                <p><%= booking.flat.description.truncate(60) %></p>
+              </div>
+              <h2 class="card-trip-pricing">$<%= booking.flat.price.to_i %></h2>
+              <% if booking.flat.user.avatar.key.present? %>
+                <%= cl_image_tag booking.flat.user.avatar.key, class: "card-trip-user avatar-bordered" %>
+              <% else %>
+                <%= image_tag "generic-user.jpg", class: "card-trip-user avatar-bordered" %>
+              <% end %>  
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   <% end %>
 </div>
 <%= will_paginate @flats, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-center) %>
