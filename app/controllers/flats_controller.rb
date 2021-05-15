@@ -9,7 +9,7 @@ class FlatsController < ApplicationController
       @flats = policy_scope(Flat).order(created_at: :desc).paginate(page: params[:page], per_page: 9)
     end
   end
-  
+
   def show
     @flat = Flat.find(params[:id])
     @markers = [{lat: @flat.latitude, lng: @flat.longitude}]

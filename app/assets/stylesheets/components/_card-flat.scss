@@ -5,9 +5,7 @@
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: 10px;
   border: #92b2be 3px solid;
-  margin: 15px 15px;
-  height: 300px;
-
+  margin: 12px;
 }
 
 .card-trip > img {
@@ -32,7 +30,7 @@
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
 }
 

@@ -1,6 +1,6 @@
 <div class="row m-4">
   <% @flats.each do |flat| %>
-    <div class="col-xs-12 col-sm-4">
+    <div class="col-xs-12 col-md-6 col-lg-4">
       <%= link_to flat_path(flat) do %>
         <div class="card-trip">
           <%= cl_image_tag flat.photos.first.key %>
