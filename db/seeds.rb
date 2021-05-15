@@ -14,6 +14,12 @@ photo2 = URI.open('https://cdn.britannica.com/s:575x450/84/154784-004-BD0C145B.j
 photo3 = URI.open('https://audio.mgtradio.net/storage/artists/bebel%20gilberto-1.jpg')
 photo4 = URI.open('https://studiosol-a.akamaihd.net/letras/215x215/fotos/3/1/4/f/314f5fc559418f77dfd4cc594176843f.jpg')
 
+
+puts 'cleaning data base'
+Booking.destroy_all
+Flat.destroy_all
+User.destroy_all
+
 puts 'creating users...'
 users = []
 
