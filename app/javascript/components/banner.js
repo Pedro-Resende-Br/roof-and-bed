@@ -2,9 +2,8 @@ import Typed from 'typed.js';
 
 const loadDynamicBannerText = () => {
   new Typed('#banner-typed-text', {
-    strings: ["Roof and Bed offers you the best flats!"],
-    typeSpeed: 50,
-    loop: true
+    strings: ["Roof &amp; Bed offers you the best flats!"],
+    typeSpeed: 50
   });
 }
 
