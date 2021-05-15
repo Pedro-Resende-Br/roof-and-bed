@@ -11,7 +11,7 @@
     <div class='box'>
       <ul>
         <div class="price">
-        <p><i class="fas fa-dollar-sign"></i> <strong><%=@flat.price%></strong> p/day.</p>
+        <p><i class="fas fa-dollar-sign"></i> <strong><%=@flat.price.to_i%></strong> p/day.</p>
         </div> 
         <div class="booking_button">
         <%= link_to "Book Right Now!", new_flat_booking_path(@flat), class: "btn btn-primary btn-lg"%>
