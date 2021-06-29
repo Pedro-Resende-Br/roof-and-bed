@@ -2,12 +2,14 @@
   <div class="container">
     <h1><span id="banner-typed-text"></span></h1>
   </div>
-  <div class="container w-50">
-    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+  <div class="my-search-form">
+    <div class="container w-50">
       <div class="search-form-control form-group">
-        <%= text_field_tag :query, params[:query], class: "form-control string required", placeholder: "Find a flat" %>
-        <%= submit_tag "Book now", class: "btn btn-flat" %>
+        <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+          <%= text_field_tag :query, params[:query], class: "form-control string required", placeholder: "Find a flat" %>
+          <%= submit_tag "Book now", class: "btn btn-flat" %>
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>
