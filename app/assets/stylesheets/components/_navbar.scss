@@ -23,3 +23,13 @@
   margin-top: 8px;
   margin-left: 8px;
 }
+
+@media(max-width: 700px) {
+  .logo-container {
+    padding: 2px;
+  }
+
+  .logo-container h1 {
+    font-size: 26px;
+  }
+}

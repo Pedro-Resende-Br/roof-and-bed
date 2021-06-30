@@ -1,5 +1,5 @@
-<div class="container">
-  <ul class="nav nav-tabs mx-5" id="myTab" role="tablist">
+<div class="container mt-2">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Your bookings</a>
     </li>
@@ -10,11 +10,11 @@
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active my-bookings" id="home" role="tabpanel" aria-labelledby="home-tab">
       <%= render 'components/card-booking' %>
-      <%= link_to "Book your new adventure now!", root_path(@flat), class: "btn btn-flat mx-5" %>
+      <%= link_to "Book your new adventure now!", root_path(@flat), class: "btn btn-flat" %>
     </div>
     <div class="tab-pane fade my-flats" id="profile" role="tabpanel" aria-labelledby="profile-tab">
       <%= render 'components/card-flat' %>
-      <%= link_to "Add a new flat to your collection!", new_flat_path(@flat), class: "btn btn-flat mx-5" %>
+      <%= link_to "Add a new flat to your collection!", new_flat_path(@flat), class: "btn btn-flat" %>
     </div>
   </div>
     <hr>

@@ -22,9 +22,25 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-@media(max-width: 768px) {
+@media(max-width: 700px) {
   .search-form-control .form-control {
     height: 5rem;
     text-align: center;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-form-control {
+    margin-top: 48px;
+    width: 175px;
+  }
+
+  .search-form-control .btn {
+    width: 175px;
+    right: 1px;
+    bottom: 10px;
   }
 }
