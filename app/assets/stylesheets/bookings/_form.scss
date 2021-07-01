@@ -1,3 +1,13 @@
 .form {
   width: 220px;
 }
+
+@media(max-width: 768px) {
+  .form {
+    width: 90%;
+  }
+
+  .btn-flat {
+    width: 98%;
+  }
+}
