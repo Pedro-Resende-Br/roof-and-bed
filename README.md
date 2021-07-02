@@ -3,7 +3,7 @@
 Roof & Bed is an AirBnb clone where different users can rent or put for rent flats.
 A user can book a flat in selected start_date and end_date or add flats to rent.
 
-You can check it out running at [roof-and-bed.herokuapp.com](roof-and-bed.herokuapp.com).
+You can check it out running at [roof-and-bed.herokuapp.com](http://roof-and-bed.herokuapp.com/).
 
 ## About the Code
 
