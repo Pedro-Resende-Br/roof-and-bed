@@ -1,4 +1,4 @@
-# Roof & Bed ![Roof & Bed Logo](https://github.com/Pedro-Resende-Br/roof-and-bed/blob/master/app/assets/images/roof-and-bed-logo.png =100x100)
+# Roof & Bed ![Roof & Bed Logo]<img src="https://github.com/Pedro-Resende-Br/roof-and-bed/blob/master/app/assets/images/roof-and-bed-logo.png" width="200" height="200">
 
 Roof & Bed is an AirBnb clone where different users can rent or put for rent flats.
 A user can book a flat in selected start_date and end_date or add flats to rent.
