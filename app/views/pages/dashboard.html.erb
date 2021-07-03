@@ -10,11 +10,11 @@
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active my-bookings" id="home" role="tabpanel" aria-labelledby="home-tab">
       <%= render 'components/card-booking' %>
-      <%= link_to "Book your new adventure now!", root_path(@flat), class: "btn btn-flat" %>
+      <%= link_to "Book your new adventure!", root_path(@flat), class: "btn btn-flat" %>
     </div>
     <div class="tab-pane fade my-flats" id="profile" role="tabpanel" aria-labelledby="profile-tab">
       <%= render 'components/card-flat' %>
-      <%= link_to "Add a new flat to your collection!", new_flat_path(@flat), class: "btn btn-flat" %>
+      <%= link_to "Add a new flat now!", new_flat_path(@flat), class: "btn btn-flat" %>
     </div>
   </div>
     <hr>
