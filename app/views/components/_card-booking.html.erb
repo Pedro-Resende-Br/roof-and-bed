@@ -9,6 +9,7 @@
               <div>
                 <h2><%= booking.flat.title %></h2>
                 <p><%= booking.flat.description.truncate(60) %></p>
+                <p><strong><%= booking.start_date.strftime("%-d/%-m/%Y") %> - <%= booking.end_date.strftime("%-d/%-m/%Y") %></strong></p>
               </div>
               <h2 class="card-trip-pricing">$<%= booking.flat.price.to_i %></h2>
               <% if booking.flat.user.avatar.key.present? %>
@@ -29,6 +30,7 @@
               <div>
                 <h2><%= booking.flat.title %></h2>
                 <p><%= booking.flat.description.truncate(60) %></p>
+                <p><strong><%= booking.start_date.strftime("%-d/%-m/%Y") %> - <%= booking.end_date.strftime("%-d/%-m/%Y") %></strong></p>
               </div>
               <h2 class="card-trip-pricing">$<%= booking.flat.price.to_i %></h2>
               <% if booking.flat.user.avatar.key.present? %>
