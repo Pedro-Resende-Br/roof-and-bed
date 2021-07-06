@@ -3,3 +3,13 @@
   width: 100%;
   object-fit: cover;
 }
+
+@media(max-width: 768px) {
+  .flat-photo {
+    height: 250px;
+  }
+
+  .photo-small {
+    height: 250px;
+  }
+}

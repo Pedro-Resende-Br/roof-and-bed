@@ -2,11 +2,11 @@
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <%= cl_image_tag @flat.photos.first.key, :class=>"d-block w-100", :alt=>"Flat image", :height=>500, :width=>1200, :crop=>"scale" %>
+        <%= cl_image_tag @flat.photos.first.key, :class=>"d-block w-100 photo-small", :alt=>"Flat image", :height=>500, :width=>1200, :crop=>"scale" %>
       </div>
       <% @flat.photos.drop(1).each do |photo| %>
         <div class="carousel-item">
-          <%= cl_image_tag photo.key, :class=>"d-block w-100", :alt=>"Flat image", :height=>500, :width=>1200, :crop=>"scale" %>
+          <%= cl_image_tag photo.key, :class=>"d-block w-100 photo-small", :alt=>"Flat image", :height=>500, :width=>1200, :crop=>"scale" %>
         </div>
       <% end %>
     </div>
