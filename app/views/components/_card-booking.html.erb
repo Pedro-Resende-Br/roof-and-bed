@@ -19,7 +19,9 @@
               <% end %>  
             </div>
           </div>
-          <%= link_to "", flat_booking_path(booking.flat, booking), method: :delete, data: {confirm: "Are you sure?"}, class: "fas fa-trash-alt delete-btn d-flex justify-content-end mr-3" %>
+          <div class="d-flex justify-content-end mr-3">
+            <%= link_to "", flat_booking_path(booking.flat, booking), method: :delete, data: {confirm: "Are you sure?"}, class: "fas fa-trash-alt delete-btn" %>
+          </div>
         <% end %>
       </div>
     <% else %>
