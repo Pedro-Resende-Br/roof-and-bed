@@ -47,10 +47,19 @@ a:hover {
     }
 }
 
+.box_container {
+  display: flex;
+  justify-content: center;
+
+}
+
 .box_sign_up {
+  color: white;
   background-color: rgb(0, 175, 255);
   border-radius: 10px;
   margin: 15px;
   padding: 15px;
   width: 335px;
+  box-shadow: -2px 2px 5px 2px gray;
+  text-shadow: -1px 1px 2px gray;
 }

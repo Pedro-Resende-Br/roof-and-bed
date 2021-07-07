@@ -1,8 +1,10 @@
-<%= simple_form_for flat do |f| %>
-  <%= f.input :title %>
-  <%= f.input :address, html: { id: :flat_address } %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.button :submit, class: "btn btn-flat" %>
-<% end %>
+<div class="form-flat p-3">
+  <%= simple_form_for flat do |f| %>
+    <%= f.input :title %>
+    <%= f.input :address, html: { id: :flat_address } %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+    <%= f.button :submit, class: "btn btn-flat" %>
+  <% end %>
+</div>

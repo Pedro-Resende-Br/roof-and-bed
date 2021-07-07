@@ -1,9 +1,9 @@
 .delete-btn {
-  color: rgb(143, 0, 0) !important;
+  color: white!important;
   font-size: 25px;
+  text-shadow: 1px 1px gray;
 }
 
 .delete-btn:hover {
-  color: black !important;
-  text-shadow: 0 0 10px rgba(0,0,0,0.9);
+  color: rgb(0, 175, 255) !important;
 }
